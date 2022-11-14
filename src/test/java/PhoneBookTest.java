@@ -85,4 +85,27 @@ public class PhoneBookTest {
 
         assertNull(result);
     }
+
+    @Test
+    public void testFindByName() {
+        String name = "Petya";
+        String number = "+7 777 777 7777";
+        String name2 = "Tanya";
+        String number2 = "+7 888 888 8888";
+        sut.add(name, number);
+        sut.add(name2, number2);
+        String expected = "+7 888 888 8888";
+
+        String result = sut.findByName(name2);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testFindByNameNull() {
+
+        String result = sut.findByName("Tanya");
+
+        assertNull(result);
+    }
 }
