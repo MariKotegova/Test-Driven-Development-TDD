@@ -36,6 +36,10 @@ public class PhoneBook {
     }
 
     public String findByName(String name) {
-        return null;
+        if (myPhoneBook.isEmpty()) {
+            return null;
+        } else {
+            return myPhoneBook.get(name);
+        }
     }
 }

@@ -102,6 +102,19 @@ public class PhoneBookTest {
     }
 
     @Test
+    public void testFindByNameNull2() {
+        String name = "Petya";
+        String number = "+7 777 777 7777";
+        String name2 = "Tanya";
+        sut.add(name, number);
+
+        String result = sut.findByName(name2);
+
+        assertNull(result);
+
+    }
+
+    @Test
     public void testFindByNameNull() {
 
         String result = sut.findByName("Tanya");
