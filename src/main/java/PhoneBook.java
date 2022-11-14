@@ -44,6 +44,15 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        if (myPhoneBook.isEmpty()) {
+            return null;
+        } else {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(myPhoneBook.keySet().stream()
+                    .sorted()
+                    .collect(Collectors.toList()));
+            String result = stringBuilder.toString().substring(1, stringBuilder.length() - 1);
+            return result;
+        }
     }
 }

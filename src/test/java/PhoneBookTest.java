@@ -80,7 +80,6 @@ public class PhoneBookTest {
 
     @Test
     public void testFindByNumberNull() {
-
         String result = sut.findByNumber("+7 666 666 6666");
 
         assertNull(result);
@@ -115,7 +114,6 @@ public class PhoneBookTest {
 
     @Test
     public void testFindByNameNull() {
-
         String result = sut.findByName("Tanya");
 
         assertNull(result);
@@ -141,7 +139,6 @@ public class PhoneBookTest {
 
     @Test
     public void testPrintAllNamesNull() {
-
         String result = sut.printAllNames();
 
         assertNull(result);
