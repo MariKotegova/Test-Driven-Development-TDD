@@ -23,6 +23,15 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number) {
-        return null;
+        if (myPhoneBook.isEmpty()) {
+            return null;
+        } else {
+            for (Map.Entry<String, String> kv : myPhoneBook.entrySet()) {
+                if (kv.getValue() == number) {
+                    return kv.getKey();
+                }
+            }
+            return null;
+        }
     }
 }
