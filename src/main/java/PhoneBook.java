@@ -1,5 +1,5 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
     private Map<String, String> myPhoneBook = new HashMap<>();
@@ -41,5 +41,9 @@ public class PhoneBook {
         } else {
             return myPhoneBook.get(name);
         }
+    }
+
+    public String printAllNames() {
+        return null;
     }
 }

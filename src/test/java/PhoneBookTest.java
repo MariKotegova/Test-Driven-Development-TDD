@@ -111,13 +111,38 @@ public class PhoneBookTest {
         String result = sut.findByName(name2);
 
         assertNull(result);
-
     }
 
     @Test
     public void testFindByNameNull() {
 
         String result = sut.findByName("Tanya");
+
+        assertNull(result);
+    }
+
+    @Test
+    public void testPrintAllNames() {
+        String name = "Petya";
+        String number = "+7 777 777 7777";
+        String name2 = "Tanya";
+        String number2 = "+7 888 888 8888";
+        String name3 = "Alya";
+        String number3 = "+7 999 999 9999";
+        sut.add(name, number);
+        sut.add(name2, number2);
+        sut.add(name3, number3);
+        String expected = "Alya, Petya, Tanya";
+
+        String result = sut.printAllNames();
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testPrintAllNamesNull() {
+
+        String result = sut.printAllNames();
 
         assertNull(result);
     }
